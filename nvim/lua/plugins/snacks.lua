@@ -49,7 +49,9 @@ return {
       }
     },
     ---@type snacks.picker.Config
-    picker = { enabled = true, auto_close = true },
+    picker = { enabled = true, auto_close = true, ignored = true, hidden = true },
+    explorer = { enabled = true },
+    image = { enabled = true },
     quickfile = { enabled = true },
     debug = { enabled = true },
     dim = { enabled = true },
