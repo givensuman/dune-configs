@@ -32,7 +32,7 @@ Use `just` to manage syncing these configurations as dotfiles.
 | just sync-up-brew | Log installed packages to `brew_packages` |
 | just sync-down-brew | Install packages logged in `brew_packages` |
 | just sync-up | Run `just sync-up-all` and `just sync-up-brew` |
-| just sync-down | Run `just sync-down-all` and `just sync-down-all` |
+| just sync-down | Run `just sync-down-all` and `just sync-down-brew` |
 
 
 <div align="center">
