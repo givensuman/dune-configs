@@ -8,21 +8,32 @@
 
 ## About
 
-Intended for use with [Dune OS](https://github.com/givensuman/dune-os)
+These are configuration files for my computer, intended for use with [Dune OS](https://github.com/givensuman/dune-os). Outside of what's listed in `brew_packages`, Fish is a requirement. Install it with:
+
+```bash
+rpm-ostree install --apply-live fish
+sudo usermod -s $(which fish) $USER
+```
+
+If you plan on using these, remove `gh/` and `git/` as they'd be of no use to you but may cause issues if overriding files on your system.
 
 <img src="https://github.com/givensuman/dune-os/blob/main/assets/screenshot.png" />
 
-### Install brew packages
+## Justfile
 
-```
-xargs brew install < brew-packages.txt
-```
+Use `just` to manage syncing these configurations as dotfiles.
 
-### Update brew packages
+|Script|Description|
+|---|---|
+| just sync-up-config \<config\> | Move a system config here |
+| just sync-down-config \<config\> | Move a config here to the system |
+| just sync-up-all | Run `just sync-up-config` for each config here |
+| just sync-down-all | Run `just sync-down-config` for each config here |
+| just sync-up-brew | Log installed packages to `brew_packages` |
+| just sync-down-brew | Install packages logged in `brew_packages` |
+| just sync-up | Run `just sync-up-all` and `just sync-up-brew` |
+| just sync-down | Run `just sync-down-all` and `just sync-down-all` |
 
-```
-brew leaves > brew-packages.txt
-```
 
 <div align="center">
   <img src="https://github.com/givensuman/dune-os/blob/main/assets/readme_footer.png" />

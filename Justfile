@@ -1,7 +1,9 @@
+# Run `just sync-up-all` and `just sync-up-brew`
 sync-up: sync-up-all sync-up-brew
+# Run `just sync-down-all` and `just sync-down-all`
 sync-down: sync-down-all sync-down-brew
 
-# Put local config here
+# Move a system config here
 sync-up-config config:
   #!/bin/bash
   set -euxo pipefail
@@ -14,7 +16,7 @@ sync-up-config config:
   rm -rf "./{{ config }}" || true
   cp -r "~/.config/{{ config }}" .
 
-# sync-up for every tracked config
+# Run `just sync-up-config` for each config here
 sync-up-all:
   #!/bin/bash
   set -euxo pipefail
@@ -25,7 +27,7 @@ sync-up-all:
     just sync-up-config "$dirname"
   done
 
-# Put config onto system
+# Move a config here to the system
 sync-down-config config:
   #!/bin/bash
   set -euxo pipefail
@@ -38,7 +40,7 @@ sync-down-config config:
   rm -rf "~/.config/{{ config }}" || true
   cp -r "./{{ config }}" "~/.config/{{ config }}"
 
-# sync-down for every tracked config
+# Run `just sync-down-config` for each config here
 sync-down-all:
   #!/bin/bash
   set -euxo pipefail
@@ -49,7 +51,7 @@ sync-down-all:
     just sync-down-config "$dirname"
   done
 
-# Create log of installed packages
+# Install packages logged in `brew_packages`
 sync-up-brew:
   #!/bin/bash
   set -euxo pipefail
