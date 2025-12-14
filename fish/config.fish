@@ -1,7 +1,7 @@
 set --global eza_run_on_cd true
+set --global zoxide_cmd_override cd
 
-set -U mise_activate_mode shims
-mise activate fish | source
+set --global EDITOR nvim
 
 # hydro prompt
 set --global fish_prompt_pwd_dir_length 999
@@ -19,15 +19,10 @@ set --global hydro_color_pwd 89b4fa
 set --global hydro_color_git f9e2af
 set --global hydro_color_duration 94e2d5
 
+# fish
 set --global fish_greeting ""
 
 fish_default_key_bindings
 
 bind ctrl-f accept-autosuggestion
 bind ctrl-g nextd-or-forward-word
-
-set --global EDITOR nvim
-
-function md2pdf
-    pandoc $argv -s -f gfm -o (basename $argv .md).pdf --pdf-engine=typst
-end

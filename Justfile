@@ -7,20 +7,24 @@ sync-down: sync-down-all sync-down-brew
 sync-up-config config:
   #!/bin/bash
   set -euxo pipefail
-  if [[ ! -d "~/.config/{{ config }}" ]]; then
+  if [[ ! -d "$HOME/.config/{{ config }}" ]]; then
     echo "{{ config }} directory not found in ~/.config"
     exit 1
   fi
 
   echo "Syncing {{ config }}..."
+  temp=$(mktemp -d)
+  cp -r "$HOME/.config/{{ config }}" "$temp/"
+
   rm -rf "./{{ config }}" || true
-  cp -r "~/.config/{{ config }}" .
+  mv "$temp/{{ config }}" .
+  rm -rf "$temp"
 
 # Run `just sync-up-config` for each config here
 sync-up-all:
   #!/bin/bash
   set -euxo pipefail
-  for dir in "./*/"; do
+  for dir in */; do
     [[ ! -d "$dir" ]] && continue
 
     dirname=$(basename "$dir")
@@ -37,14 +41,18 @@ sync-down-config config:
   fi
 
   echo "Syncing {{ config }}..."
-  rm -rf "~/.config/{{ config }}" || true
-  cp -r "./{{ config }}" "~/.config/{{ config }}"
+  temp=$(mktemp -d)
+  cp -r "./{{ config }}" "$temp/"
+
+  rm -rf "$HOME/.config/{{ config }}" || true
+  mv "$temp/{{ config }}" "$HOME/.config/"
+  rm -rf "$temp"
 
 # Run `just sync-down-config` for each config here
 sync-down-all:
   #!/bin/bash
   set -euxo pipefail
-  for dir in "./*/"; do
+  for dir in */; do
     [[ ! -d "$dir" ]] && continue
 
     dirname=$(basename "$dir")
