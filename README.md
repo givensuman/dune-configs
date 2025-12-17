@@ -25,14 +25,14 @@ Use `just` to manage syncing these configurations as dotfiles.
 
 |Script|Description|
 |---|---|
+| just add-config \<config\> | Add config here to be tracked |
+| just remove-config \<config\> | Remove a tracked config from here |
 | just sync-up-config \<config\> | Move a system config here |
 | just sync-down-config \<config\> | Move a config here to the system |
 | just sync-up-all | Run `just sync-up-config` for each config here |
 | just sync-down-all | Run `just sync-down-config` for each config here |
-| just sync-up-brew | Log installed packages to `brew_packages` |
-| just sync-down-brew | Install packages logged in `brew_packages` |
-| just sync-up | Run `just sync-up-all` and `just sync-up-brew` |
-| just sync-down | Run `just sync-down-all` and `just sync-down-brew` |
+| just sync-up | Run `just sync-up-all` |
+| just sync-down | Run `just sync-down-all` |
 
 
 <div align="center">

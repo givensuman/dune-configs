@@ -1,7 +1,7 @@
-# Run `just sync-up-all` and `just sync-up-brew`
-sync-up: sync-up-all sync-up-brew
-# Run `just sync-down-all` and `just sync-down-all`
-sync-down: sync-down-all sync-down-brew
+# Run `just sync-up-all`
+sync-up: sync-up-all
+# Run `just sync-down-all`
+sync-down: sync-down-all
 
 # Move a system config here
 sync-up-config config:
@@ -59,14 +59,27 @@ sync-down-all:
     just sync-down-config "$dirname"
   done
 
-# Install packages logged in `brew_packages`
-sync-up-brew:
+# Add config here to be tracked
+add-config config:
   #!/bin/bash
   set -euxo pipefail
-  brew leaves > brew_packages
+  if [[ -d "./{{ config }}" ]]; then
+    echo "{{ config }} is already being tracked"
+    exit 1
+  fi
 
-# Install packages from log
-sync-down-brew:
-  #!/bin/bash
-  set -euxo pipefail
-  xargs brew install < brew_packages
+  if [[ ! -d "$HOME/.config/{{  config }}" ]]; then
+    echo "{{ config }} doesn't appear to be on system"
+    exit 1
+  fi
+
+  cp -r "$HOME/.config/{{ config }}" .
+
+# Remove a tracked config from here
+remove-config config:
+  if [[ ! -d "./{{ config }}" ]]; then
+    echo "{{ config }} isn't being tracked"
+    exit 1
+  fi
+
+  rm -rf "./{{ config }}"
