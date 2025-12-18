@@ -1,19 +1,10 @@
 <div align="center">
   <img src="https://github.com/givensuman/dune-os/blob/main/assets/readme_header.png" />
-
-  <img src="https://img.shields.io/github/actions/workflow/status/givensuman/dune-os/build.yml?labelColor=purple" />
-  <img src="https://img.shields.io/github/actions/workflow/status/givensuman/dune-os/build_iso.yml?label=build%20iso&labelColor=blue" />
-  <img src="https://img.shields.io/endpoint?url=https://artifacthub.io/badge/repository/dune-os" />
 </div>
 
 ## About
 
-These are configuration files for my computer, intended for use with [Dune OS](https://github.com/givensuman/dune-os). Outside of what's listed in `brew_packages`, Fish is a requirement. Install it with:
-
-```bash
-rpm-ostree install --apply-live fish
-sudo usermod -s $(which fish) $USER
-```
+These are configuration files for my computer, intended for use with [Dune OS](https://github.com/givensuman/dune-os).
 
 If you plan on using these, remove `gh/` and `git/` as they'd be of no use to you but may cause issues if overriding files on your system.
 
