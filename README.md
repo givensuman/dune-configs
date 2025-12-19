@@ -22,8 +22,10 @@ Use `just` to manage syncing these configurations as dotfiles.
 | just sync-down-config \<config\> | Move a config here to the system |
 | just sync-up-all | Run `just sync-up-config` for each config here |
 | just sync-down-all | Run `just sync-down-config` for each config here |
-| just sync-up | Run `just sync-up-all` |
-| just sync-down | Run `just sync-down-all` |
+| just sync-up-brew | Write log from brew packages |
+| just sync-down-brew | Install brew packages from log |
+| just sync-up | Run `just sync-up-all` and `just sync-up-brew` |
+| just sync-down | Run `just sync-down-all` and `just-sync-down-brew` |
 
 
 <div align="center">
