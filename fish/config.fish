@@ -6,8 +6,9 @@ set --global EDITOR nvim
 # hydro prompt
 set --global fish_prompt_pwd_dir_length 999
 set --global hydro_multiline true
+
 set --global hydro_symbol_start "\n"
-set --global hydro_symbol_prompt " "
+set --global hydro_symbol_prompt "  "
 set --global hydro_symbol_git_dirty "  "
 set --global hydro_symbol_git_ahead "  "
 set --global hydro_symbol_git_behind "  "
@@ -21,8 +22,8 @@ set --global hydro_color_duration 94e2d5
 
 # fish
 set --global fish_greeting ""
-
-fish_default_key_bindings
+set --global fish_key_bindings fish_default_key_bindings
 
 bind ctrl-f accept-autosuggestion
 bind ctrl-g nextd-or-forward-word
+bind \b backward-kill-word

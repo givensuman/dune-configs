@@ -7,12 +7,12 @@ jorgebucaran/hydro
 jorgebucaran/autopair.fish
 kenji-miyake/reload.fish
 joseluisq/gitnow
-givensuman/fish-brew
-givensuman/fish-bat
-givensuman/fish-eza
-givensuman/fish-archive
-givensuman/fish-copyutils
 givensuman/fish-zoxide
 givensuman/fish-autovenv
 patrickf1/fzf.fish
 fishingline/safe-rm
+givensuman/fish-archive
+/var~/Dev/fish-eza
+givensuman/fish-copyutils
+givensuman/fish-bat
+givensuman/fish-brew

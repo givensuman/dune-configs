@@ -14,11 +14,16 @@ sync-up-config config:
 
   echo "Syncing {{ config }}..."
   temp=$(mktemp -d)
-  cp -r "$HOME/.config/{{ config }}" "$temp/"
+
+  success=false
+  trap "if [ '$success' = false ] && [ -d '$temp/backup' ]; then mv '$temp/backup' './{{ config }}' 2>/dev/null || true; fi; rm -rf '$temp'" EXIT
+
+  cp -r "./{{ config }}" "$temp/backup" 2>/dev/null || true
+  cp -r "$HOME/.config/{{ config }}" "$temp/new"
 
   rm -rf "./{{ config }}" || true
-  mv "$temp/{{ config }}" .
-  rm -rf "$temp"
+  mv "$temp/new" "./{{ config }}"
+  success=true
 
 # Run `just sync-up-config` for each config here
 sync-up-all:
@@ -42,11 +47,16 @@ sync-down-config config:
 
   echo "Syncing {{ config }}..."
   temp=$(mktemp -d)
-  cp -r "./{{ config }}" "$temp/"
+
+  success=false
+  trap "if [ '$success' = false ] && [ -d '$temp/backup' ]; then mv '$temp/backup' '$HOME/.config/{{ config }}' 2>/dev/null || true; fi; rm -rf '$temp'" EXIT
+
+  cp -r "$HOME/.config/{{ config }}" "$temp/backup" 2>/dev/null || true
+  cp -r "./{{ config }}" "$temp/new"
 
   rm -rf "$HOME/.config/{{ config }}" || true
-  mv "$temp/{{ config }}" "$HOME/.config/"
-  rm -rf "$temp"
+  mv "$temp/new" "$HOME/.config/{{ config }}"
+  success=true
 
 # Run `just sync-down-config` for each config here
 sync-down-all:
@@ -73,6 +83,7 @@ add-config config:
     exit 1
   fi
 
+  trap "rm -rf './{{ config }}'" ERR
   cp -r "$HOME/.config/{{ config }}" .
 
 # Remove a tracked config from here

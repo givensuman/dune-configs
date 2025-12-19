@@ -1,3 +1,20 @@
+# `eza` wrapper with parameter handling
+function _ls --wraps eza
+    if set -q eza_params; and test -n "$eza_params"
+        set -l params (string split ' ' -- $eza_params)
+
+        command eza $params $argv
+    else
+        command eza --git \
+            --icons \
+            --group \
+            --group-directories-first \
+            --time-style=long-iso \
+            --color-scale=all \
+            $argv
+    end
+end
+
 # Automatically run `ls` when `$eza_run_on_cd` is set
 function _auto_ls --on-variable PWD
     if status is-interactive
@@ -22,7 +39,7 @@ if test "$TERM" = dumb
     return 1
 end
 
-# see ../functions/_ls.fish
+# see ../functions/_fish_eza__ls.fish
 alias ls _ls
 
 alias la 'eza -lbhHigUmuSa'

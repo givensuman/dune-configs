@@ -9,6 +9,10 @@ function copyfile --description "Copy file contents to clipboard"
         return 1
     end
 
+    # Use `cat` from binary in event of alias
+    # e.g. givensuman/fish-bat
+    set cat_bin $(which cat)
+
     # Copy `cat` output to clipboard
-    cat $argv[1] | fish_clipboard_copy
+    $cat_bin $argv[1] | fish_clipboard_copy
 end
