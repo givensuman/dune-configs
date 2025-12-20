@@ -7,8 +7,10 @@ fd
 fzf
 gh
 lazygit
+mise
 neovim
 shellcheck
+shfmt
 sst/tap/opencode
 tree-sitter
 zoxide

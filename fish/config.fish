@@ -3,6 +3,8 @@ set --global zoxide_cmd_override cd
 
 set --global EDITOR nvim
 
+alias box distrobox
+
 # hydro prompt
 set --global fish_prompt_pwd_dir_length 999
 set --global hydro_multiline true

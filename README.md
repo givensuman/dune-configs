@@ -26,6 +26,7 @@ Use `just` to manage syncing these configurations as dotfiles.
 | just sync-down-brew | Install brew packages from log |
 | just sync-up | Run `just sync-up-all` and `just sync-up-brew` |
 | just sync-down | Run `just sync-down-all` and `just-sync-down-brew` |
+| just push | Push changes to git |
 
 
 <div align="center">
