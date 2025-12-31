@@ -1,4 +1,5 @@
 bat
+bottom
 cosign
 delve
 eza
@@ -13,4 +14,5 @@ shellcheck
 shfmt
 sst/tap/opencode
 tree-sitter
+yazi
 zoxide
