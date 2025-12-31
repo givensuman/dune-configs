@@ -1,4 +1,5 @@
-default:
+# Print help message
+help:
   #!/bin/bash
   just --list
 
