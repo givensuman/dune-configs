@@ -12,7 +12,8 @@ fishingline/safe-rm
 givensuman/fish-bat
 givensuman/fish-zoxide
 givensuman/fish-autovenv
-givensuman/fish-eza
 givensuman/fish-brew
 givensuman/fish-archive
 givensuman/fish-copyutils
+/var~/Dev/fish-eza
+catppuccin/fish

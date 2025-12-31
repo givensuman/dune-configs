@@ -24,9 +24,9 @@ set --global hydro_symbol_git_ahead "  "
 set --global hydro_symbol_git_behind "  "
 
 # catppuccin
-set --global hydro_color_prompt b4befe
+set --global hydro_color_prompt 89b4fa
 set --global hydro_color_error f38ba8
-set --global hydro_color_pwd 89b4fa
+set --global hydro_color_pwd b4befe
 set --global hydro_color_git f9e2af
 set --global hydro_color_duration 94e2d5
 
@@ -36,4 +36,4 @@ set --global fish_key_bindings fish_default_key_bindings
 
 bind ctrl-f accept-autosuggestion
 bind ctrl-g nextd-or-forward-word
-bind \b backward-kill-word
+bind ctrl-b backward-kill-word
