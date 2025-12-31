@@ -1,3 +1,6 @@
+alias compress _fish_archive_compress
+alias extract _fish_archive_extract
+
 function _fish_archive_install --on-event fish-archive_install
 end
 

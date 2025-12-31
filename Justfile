@@ -1,3 +1,7 @@
+default:
+  #!/bin/bash
+  just --list
+
 # Run `just sync-up-all` and `just sync-up-brew`
 sync-up: sync-up-all sync-up-brew
 

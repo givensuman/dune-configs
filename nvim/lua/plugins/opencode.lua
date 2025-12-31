@@ -5,7 +5,7 @@ return {
   },
   config = function()
     vim.g.opencode_opts = {
-      theme = "catppuccin",
+      theme = "system",
     }
     vim.opt.autoread = true
 

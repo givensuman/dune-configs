@@ -16,8 +16,16 @@ function _autovenv --on-variable PWD
     end
 end
 
+function _fish_autovenv_install --on-event fish-autovenv_install
+end
+
 function _fish_autovenv_uninstall --on-event fish-autovenv_uninstall
     functions --erase _autovenv
 
     set --erase autovenv_disable
+end
+
+function _fish_autovenv_update --on-event fish-autovenv_update
+  _fish_autovenv_uninstall
+  _fish_autovenv_install
 end

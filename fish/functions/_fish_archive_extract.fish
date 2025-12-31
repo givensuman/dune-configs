@@ -1,4 +1,4 @@
-function extract
+function _fish_archive_extract
     if test (count $argv) -lt 1
         echo "Usage: extract <archive_file>"
         return 1

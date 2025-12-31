@@ -1,5 +1,5 @@
 # Copies the contents of a given file to the system clipboard
-function copyfile --description "Copy file contents to clipboard"
+function _fish_copyutils_copyfile --description "Copy file contents to clipboard"
     argparse --min-args 1 --max-args 1 -- $argv
     or return
 

@@ -2,6 +2,9 @@ set --global eza_run_on_cd true
 set --global zoxide_cmd_override cd
 
 set --global EDITOR nvim
+function edit
+  $EDITOR $argv
+end
 
 alias box distrobox
 
@@ -9,8 +12,13 @@ alias box distrobox
 set --global fish_prompt_pwd_dir_length 999
 set --global hydro_multiline true
 
+if set -q DISTROBOX_ENTER_PATH
+    set --global hydro_symbol_prompt " [distrobox] "
+else
+    set --global hydro_symbol_prompt " "
+end
+
 set --global hydro_symbol_start "\n"
-set --global hydro_symbol_prompt "  "
 set --global hydro_symbol_git_dirty "  "
 set --global hydro_symbol_git_ahead "  "
 set --global hydro_symbol_git_behind "  "

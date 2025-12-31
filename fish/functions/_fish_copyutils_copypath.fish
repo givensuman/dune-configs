@@ -1,6 +1,6 @@
 # Copies the path of given directory or file to the system
 # Copies current dirrectory if not passed an argument
-function copypath --description "Copy path to clipboard"
+function _fish_copyutils_copypath --description "Copy path to clipboard"
     argparse --max-args 1 -- $argv
     or return
 

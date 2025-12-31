@@ -6,19 +6,19 @@
         alpha: 1.0,
     ),
     hover: (
-        red: 0.6377934,
+        red: 0.6377935,
         green: 0.6727859,
         blue: 0.8914069,
         alpha: 1.0,
     ),
     pressed: (
-        red: 0.3873347,
-        green: 0.4123627,
+        red: 0.3873348,
+        green: 0.41236266,
         blue: 0.5735333,
         alpha: 1.0,
     ),
     selected: (
-        red: 0.6377934,
+        red: 0.6377935,
         green: 0.6727859,
         blue: 0.8914069,
         alpha: 1.0,

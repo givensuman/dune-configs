@@ -1,4 +1,4 @@
-function compress
+function _fish_archive_compress
     if test (count $argv) -lt 1
         echo "Usage: compress <files...> [output_archive]"
         return 1
