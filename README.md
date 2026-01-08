@@ -1,5 +1,5 @@
 <div align="center">
-  <img src="https://github.com/givensuman/goose-linux/blob/main/assets/goose.png" />
+  <img src="https://github.com/givensuman/goose-linux/blob/main/assets/goose.png" width="250" />
 </div>
 
 ## About
@@ -10,7 +10,9 @@ If you plan on using these, remove `gh/` and `git/` as they'd be of no use to yo
 
 <img width="2256" height="1504" alt="Screenshot_2026-01-07_23-02-43" src="https://github.com/user-attachments/assets/9e2f58c4-4d65-43fd-bcc7-0771c072872e" />
 
-<img width="2256" height="1504" alt="Screenshot_2026-01-07_23-03-01" src="https://github.com/user-attachments/assets/7c83adb5-6497-4aea-a1e9-b6ee8675e237" />
+<img width="2256" height="1504" alt="Screenshot_2026-01-08_13-19-37" src="https://github.com/user-attachments/assets/b498ae0d-f3ae-4d28-aff1-168b501e1fda" />
+
+<img width="2256" height="1504" alt="Screenshot_2026-01-08_13-21-30" src="https://github.com/user-attachments/assets/1f3334f7-64fe-41b7-a278-594e99c2349c" />
 
 
 ## Justfile
