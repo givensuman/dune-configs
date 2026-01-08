@@ -32,8 +32,3 @@ Use `just` to manage syncing these configurations as dotfiles.
 | just sync-up | Run `just sync-up-all` and `just sync-up-brew` |
 | just sync-down | Run `just sync-down-all` and `just-sync-down-brew` |
 | just push | Push changes to git |
-
-
-<div align="center">
-  <img src="https://github.com/givensuman/goose-linux/blob/main/assets/banner.png" />
-</div>
