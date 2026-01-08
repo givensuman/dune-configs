@@ -1,14 +1,14 @@
 <div align="center">
-  <img src="https://github.com/givensuman/dune-os/blob/main/assets/readme_header.png" />
+  <img src="https://github.com/givensuman/goose-linux/blob/main/assets/goose.png" />
 </div>
 
 ## About
 
-These are configuration files for my computer, intended for use with [Dune OS](https://github.com/givensuman/dune-os).
+These are configuration files for my computer, intended for use with [goose linux](https://github.com/givensuman/goose-linux).
 
 If you plan on using these, remove `gh/` and `git/` as they'd be of no use to you but may cause issues if overriding files on your system.
 
-<img src="https://github.com/givensuman/dune-os/blob/main/assets/screenshot.png" />
+<img src="https://github.com/givensuman/goose-linux/blob/main/assets/screenshot.png" />
 
 ## Justfile
 
@@ -30,5 +30,5 @@ Use `just` to manage syncing these configurations as dotfiles.
 
 
 <div align="center">
-  <img src="https://github.com/givensuman/dune-os/blob/main/assets/readme_footer.png" />
+  <img src="https://github.com/givensuman/goose-linux/blob/main/assets/banner.png" />
 </div>
