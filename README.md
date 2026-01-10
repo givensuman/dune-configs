@@ -10,7 +10,7 @@ If you plan on using these, remove `gh/` and `git/` as they'd be of no use to yo
 
 <img width="2256" height="1504" alt="Screenshot_2026-01-07_23-02-43" src="https://github.com/user-attachments/assets/9e2f58c4-4d65-43fd-bcc7-0771c072872e" />
 
-<img width="2256" height="1504" alt="Screenshot_2026-01-08_13-19-37" src="https://github.com/user-attachments/assets/b498ae0d-f3ae-4d28-aff1-168b501e1fda" />
+<img width="2256" height="1504" alt="Screenshot_2026-01-10_13-40-08" src="https://github.com/user-attachments/assets/754424f8-9bc7-4f28-8024-f8f4ea5219f7" />
 
 <img width="2256" height="1504" alt="Screenshot_2026-01-08_13-21-30" src="https://github.com/user-attachments/assets/1f3334f7-64fe-41b7-a278-594e99c2349c" />
 
