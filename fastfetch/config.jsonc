@@ -70,6 +70,12 @@
       "type": "monitor",
       "key": " ",
       "keyColor": "36"
+    },
+    {
+      "type": "break"
+    },
+    {
+      "type": "colors"
     }
   ]
 }
