@@ -1,4 +1,4 @@
-function bleaves
+function _fish_brew_bleaves
     set formulae "$(brew leaves | xargs brew deps --installed --for-each)"
     set casks "$(brew list --cask)"
 

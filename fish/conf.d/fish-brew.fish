@@ -34,6 +34,8 @@ if not command -q brew
     return 1
 end
 
+alias bleaves _fish_brew_bleaves
+
 alias bl bleaves
 alias bi 'brew install'
 alias ba 'brew autoremove'

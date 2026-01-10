@@ -2,6 +2,8 @@
 bun = "latest"
 deno = "latest"
 go = "latest"
+golangci-lint = "latest"
+golangci-lint-langserver = "latest"
 lua = "latest"
 node = "latest"
 npm = "latest"
